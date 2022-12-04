@@ -76,7 +76,7 @@ impl Throw {
 pub enum Outcome {
     Win,
     Lose,
-    Draw
+    Draw,
 }
 
 impl Outcome {
@@ -118,7 +118,7 @@ impl Round {
                     (Throw::Scissors, Outcome::Draw) => Throw::Scissors,
                 };
                 Round { theirs, ours }
-            }
+            },
         )(input)
     }
 

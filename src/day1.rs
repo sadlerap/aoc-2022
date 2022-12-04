@@ -79,7 +79,8 @@ pub fn part1(input: &str) -> u32 {
 /// ```
 #[aoc(day1, part2)]
 pub fn part2(input: &str) -> u32 {
-    let mut data: Vec<u32> = input.split("\n\n")
+    let mut data: Vec<u32> = input
+        .split("\n\n")
         .map(|s| s.lines().map(|x| str::parse::<u32>(x).unwrap()).sum())
         .collect();
     data.sort_by_key(|&x| std::cmp::Reverse(x));
