@@ -11,11 +11,7 @@ pub fn find_chars<const N: usize>(input: &str) -> anyhow::Result<u32> {
         return Ok(N as u32);
     }
 
-    for ((first, last), count) in input
-        .chars()
-        .zip(input.chars().skip(N))
-        .zip(((N + 1)..).into_iter())
-    {
+    for ((first, last), count) in input.chars().zip(input.chars().skip(N)).zip((N + 1)..) {
         let x: &mut u32 = counter.get_mut(&first).unwrap();
         *x -= 1;
         if *x == 0 {
