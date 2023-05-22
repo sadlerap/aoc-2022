@@ -1,4 +1,4 @@
-use anyhow::{anyhow, Result, bail};
+use anyhow::{anyhow, bail, Result};
 use aoc_runner_derive::aoc;
 use nom::{
     branch::alt,
